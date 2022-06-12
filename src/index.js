@@ -6,8 +6,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate ,
-  
+  Navigate,
+
 
 } from "react-router-dom";
 import CustomerForm from './page/customer/CustomerForm';
@@ -17,8 +17,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-      <Route index element={<Navigate replace to="/customer" />} />
-        <Route path='customer' element={<CustomerForm />}/>
+        <Route path='customer' element={<CustomerForm />} />
       </Route>
     </Routes>
   </BrowserRouter>
