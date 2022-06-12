@@ -6,14 +6,19 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate ,
+  
+
 } from "react-router-dom";
+import CustomerForm from './page/customer/CustomerForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path='/:any' element={<App />}/>
+      <Route index element={<Navigate replace to="/customer" />} />
+        <Route path='customer' element={<CustomerForm />}/>
       </Route>
     </Routes>
   </BrowserRouter>
